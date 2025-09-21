@@ -9,6 +9,13 @@ const router = createRouter({
       meta: {
         name: '主页面'
       }
+    },
+    {
+      path: '/chat',
+      component: () => import('@/views/user/Chat.vue'),
+      meta: {
+        name: 'AIChat'
+      }
     }
   ],
 })
