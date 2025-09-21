@@ -1,0 +1,81 @@
+/* 全局 CSS 重置样式 */
+/* 清除所有元素的内外边距，并设置盒模型为 border-box */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 确保元素的宽度和高度包含内边距和边框 */
+}
+
+/* 处理根元素和文档流元素 */
+html, body {
+    height: 100%; /* 确保 html 和 body 元素默认占满全高 */
+    line-height: 1; /* 重置行高，可根据设计需求调整 */
+}
+
+/* 重置标题元素的默认外边距和字体大小 */
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; /* 继承父元素的字体大小，而非使用浏览器默认值 */
+    font-weight: inherit; /* 继承父元素的字体粗细 */
+}
+
+/* 重置列表样式（ul, ol） */
+ul, ol {
+    list-style: none; /* 移除列表项前的符号 */
+}
+
+/* 重置链接样式 */
+a {
+    text-decoration: none; /* 移除下划线 */
+    color: inherit; /* 继承父元素的颜色 */
+}
+
+/* 重置按钮和输入框的默认样式 */
+button, input, select, textarea {
+    background: none; /* 移除默认背景 */
+    border: none; /* 移除默认边框 */
+    font: inherit; /* 继承父元素的字体样式 */
+    color: inherit; /* 继承父元素的颜色 */
+    outline: none; /* 移除默认聚焦轮廓，建议在自定义样式时重新添加可访问性样式 */
+}
+
+/* 重置图片和媒体元素 */
+img, picture, video, canvas, svg {
+    display: block; /* 将行内元素改为块级元素，避免底部间隙 */
+    max-width: 100%; /* 防止元素溢出容器 */
+    height: auto; /* 保持原始宽高比 */
+}
+
+/* 重置表格元素 */
+table {
+    border-collapse: collapse; /* 合并表格边框 */
+    border-spacing: 0; /* 移除表格单元格间的间距 */
+}
+
+/* 可选的：设置全局字体和颜色（根据你的项目需求修改） */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    -webkit-font-smoothing: antialiased; /* 在 macOS 上使字体更平滑 */
+    -moz-osx-font-smoothing: grayscale;
+    color: #333; /* 设置默认文本颜色 */
+}
+
+/* 移除某些浏览器中 details/summary 元素的默认样式 */
+details summary {
+    list-style: none;
+}
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* 重置 fieldset 元素的默认样式 */
+fieldset {
+    border: 0;
+}
+
+/* 重置文本域（textarea）的默认滚动条和调整大小（可选） */
+textarea {
+    resize: vertical; /* 只允许垂直调整大小，设为 'none' 则完全禁止 */
+    overflow: auto; /* 根据需要显示滚动条 */
+}
