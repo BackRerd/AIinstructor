@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lnjz.backrer.aiinstructor.mapper.ChatRecordsMapper">
+
+    <resultMap id="BaseResultMap" type="lnjz.backrer.aiinstructor.entity.ChatRecords">
+            <id property="recordId" column="record_id" />
+            <result property="userId" column="user_id" />
+            <result property="sessionId" column="session_id" />
+            <result property="modelId" column="model_id" />
+            <result property="messageType" column="message_type" />
+            <result property="messageContent" column="message_content" />
+            <result property="messageTokens" column="message_tokens" />
+            <result property="responseContent" column="response_content" />
+            <result property="responseTokens" column="response_tokens" />
+            <result property="totalTokens" column="total_tokens" />
+            <result property="messageTimestamp" column="message_timestamp" />
+            <result property="isDeleted" column="is_deleted" />
+            <result property="createdAt" column="created_at" />
+            <result property="updatedAt" column="updated_at" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        record_id,user_id,session_id,model_id,message_type,message_content,
+        message_tokens,response_content,response_tokens,total_tokens,message_timestamp,
+        is_deleted,created_at,updated_at
+    </sql>
+</mapper>

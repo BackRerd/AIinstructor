@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lnjz.backrer.aiinstructor.mapper.ModelEndpointsMapper">
+
+    <resultMap id="BaseResultMap" type="lnjz.backrer.aiinstructor.entity.ModelEndpoints">
+            <id property="modelId" column="model_id" />
+            <result property="modelName" column="model_name" />
+            <result property="modelDescription" column="model_description" />
+            <result property="modelType" column="model_type" />
+            <result property="endpointConfig" column="endpoint_config" />
+            <result property="apiToken" column="api_token" />
+            <result property="createdAt" column="created_at" />
+            <result property="updatedAt" column="updated_at" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        model_id,model_name,model_description,model_type,endpoint_config,api_token,
+        created_at,updated_at
+    </sql>
+</mapper>

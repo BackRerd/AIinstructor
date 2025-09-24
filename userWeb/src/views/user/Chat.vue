@@ -17,8 +17,11 @@
 
         <div class="model-selector">
           <span>选择模型:</span>
-          <el-select v-model="currentModel" placeholder="选择AI模型" @change="handleModelChange" size="small">
-            <el-option v-for="item in modelOptions" :key="item.value" :label="item.label" :value="item.value" />
+          <el-select v-model="currentModel" placeholder="选择AI模型" @change="handleModelChange" size="small" :loading="loadingModels">
+            <el-option v-for="item in modelOptions" :key="item.modelId" :label="item.modelName" :value="item.modelId">
+              <span style="float: left">{{ item.modelName }}</span>
+              <span style="float: right; color: #8492a6; font-size: 13px">{{ item.modelType }}</span>
+            </el-option>
           </el-select>
         </div>
 
@@ -26,7 +29,7 @@
           <div v-for="session in sessionList" :key="session.id" @click="switchSession(session.id)"
                :class="['session-item', { 'active': currentSessionId === session.id }]">
             <div class="session-item-content">
-              <span class="session-model-badge">{{ getModelLabel(session.model) }}</span>
+              <span class="session-model-badge">{{ getModelName(session.modelId) }}</span>
               <p class="session-preview">{{ session.preview }}</p>
             </div>
             <el-button size="small" :icon="Delete" @click.stop="removeSession(session.id)" text />
@@ -39,8 +42,11 @@
         <div class="chat-header">
           <div class="current-model-info">
             <span>与 </span>
-            <el-tag type="info">{{ getModelLabel(currentSession.model) }}</el-tag>
+            <el-tag type="info">{{ getModelName(currentSession.modelId) }}</el-tag>
             <span> 对话中</span>
+          </div>
+          <div class="model-description" v-if="getModelDescription(currentSession.modelId)">
+            {{ getModelDescription(currentSession.modelId) }}
           </div>
         </div>
 
@@ -82,24 +88,85 @@
 import { ref, reactive, computed, onMounted, nextTick, watch } from 'vue'
 import { ElMessage, ElScrollbar } from 'element-plus'
 import { Plus, Delete, Menu } from '@element-plus/icons-vue'
+import axios from "axios";
+import { FetchModelEndpoints } from "@/api/user.js";
 
 // 响应式数据与状态管理
 const userInput = ref('')
 const isLoading = ref(false)
-const currentModel = ref('deepseek-v3')
+const currentModel = ref(null) // 改为存储modelId
 const currentSessionId = ref(null)
 const sessionList = ref([])
 const scrollbarRef = ref(null)
 const isMobile = ref(window.innerWidth < 768)
 const showSidebar = ref(false)
+const loadingModels = ref(false)
+const availableModels = ref([]) // 存储从接口获取的模型列表
 
-// 可切换的AI模型配置
-const modelOptions = [
-  { value: 'deepseek-v3', label: 'DeepSeek-V3 (通用对话)' },
-  { value: '敬请期待', label: '制作ing' },
-  // { value: 'qwen-max', label: 'Qwen-Max (通义千问)' },
-  // { value: 'gpt-4', label: 'GPT-4 (OpenAI)' }
-]
+// 获取模型列表
+const loadModels = async () => {
+  loadingModels.value = true
+  try {
+    const modelData = await FetchModelEndpoints()
+    availableModels.value = modelData.records || []
+
+    // 设置默认模型
+    if (availableModels.value.length > 0) {
+      currentModel.value = availableModels.value[0].modelId
+    }
+  } catch (error) {
+    ElMessage.error('加载模型列表失败')
+    console.error('加载模型失败:', error)
+
+    // 设置默认模型选项
+    availableModels.value = [
+      { modelId: '模型加载失败！', modelName: '请检测网络！', modelDescription: '模型加载失败！', modelType: 'deepseek' }
+    ]
+    currentModel.value = 'deepseek-v3'
+  } finally {
+    loadingModels.value = false
+  }
+}
+
+// 计算模型选项
+const modelOptions = computed(() => {
+  return availableModels.value.map(model => ({
+    modelId: model.modelId,
+    modelName: model.modelName,
+    modelType: model.modelType,
+    modelDescription: model.modelDescription
+  }))
+})
+
+// 根据modelId获取模型名称
+const getModelName = (modelId) => {
+  const model = availableModels.value.find(m => m.modelId === modelId)
+  return model ? model.modelName : '未知模型'
+}
+const getModelType = (modelId) => {
+  const model = availableModels.value.find(m => m.modelId === modelId)
+  return model ? model.modelType : '未知类型'
+}
+// 根据modelId获取模型描述
+const getModelDescription = (modelId) => {
+  const model = availableModels.value.find(m => m.modelId === modelId)
+  return model ? model.modelDescription : ''
+}
+// 根据 modelId 获取模型端点配置
+const getModelEndpoint = (modelId) => {
+  const model = availableModels.value.find(m => m.modelId === modelId)
+  return model ? model.endpointConfig : ''
+}
+// 根据 modelId 获取 API Token
+const getModelApiToken = (modelId) => {
+  const model = availableModels.value.find(m => m.modelId === modelId)
+  return model ? model.apiToken : ''
+}
+// 根据 modelId 获取完整模型对象
+const getModelById = (modelId) => {
+  return availableModels.value.find(m => m.modelId === modelId) || null
+}
+
 
 // 当前会话 computed
 const currentSession = computed(() => {
@@ -108,12 +175,14 @@ const currentSession = computed(() => {
 
 // 创建新会话
 const createNewSession = () => {
+  if (!currentModel.value) return
+
   const newSessionId = Date.now().toString()
   const newSession = {
     id: newSessionId,
-    model: currentModel.value,
+    modelId: currentModel.value,
     messages: [
-      { id: 1, role: 'assistant', content: `你好！我是${getModelLabel(currentModel.value)}，有什么可以帮你的？` }
+      { id: 1, role: 'assistant', content: `你好！我是${getModelName(currentModel.value)}，${getModelDescription(currentModel.value) || '有什么可以帮你的？'}` }
     ],
     preview: '新对话',
     createdAt: new Date()
@@ -147,15 +216,17 @@ const removeSession = (sessionId) => {
 }
 
 // 切换AI模型
-const handleModelChange = (newModel) => {
+const handleModelChange = (newModelId) => {
+  console.log(getModelApiToken(newModelId))
   if (currentSession.value) {
-    currentSession.value.model = newModel
+    currentSession.value.modelId = newModelId
     currentSession.value.messages.push({
       id: Date.now(),
       role: 'assistant',
-      content: `已切换至${getModelLabel(newModel)}，继续为您服务。`
+      content: `已切换至${getModelName(newModelId)}，${getModelDescription(newModelId) || '继续为您服务。'}`
     })
     updateSessionPreview(currentSession.value)
+
   }
 }
 
@@ -177,7 +248,9 @@ const handleSend = async () => {
   scrollToBottom()
 
   try {
-    const simulatedResponse = await simulateAIResponse(userMessage, currentSession.value.model)
+    // 获取当前模型的配置信息
+    const currentModelConfig = availableModels.value.find(m => m.modelId === currentSession.value.modelId)
+    const simulatedResponse = await simulateAIResponse(userMessage, currentModelConfig)
     await typewriterEffect(simulatedResponse, currentSession.value)
   } catch (error) {
     currentSession.value.messages.push({
@@ -192,17 +265,41 @@ const handleSend = async () => {
   }
 }
 
-// 模拟AI回复
-const simulateAIResponse = (userMessage, model) => {
+// 模拟AI回复（根据模型配置）
+const simulateAIResponse = async (userMessage, modelConfig) => {
+  if (!modelConfig) {
+    return `谢谢你的消息："${userMessage}"。我还在学习中，请多多指教。`
+  }
+
+  // 如果有API配置，可以在这里进行真实API调用
+  if (modelConfig.endpointConfig && modelConfig.apiToken) {
+    try {
+      // 示例：真实API调用
+      const response = await axios.post(modelConfig.endpointConfig, {
+        message: userMessage
+      }, {
+        headers: {
+          'Authorization': modelConfig.apiToken,
+          'Content-Type': 'application/json'
+        }
+      })
+      return response.data.response || `我是${modelConfig.modelName}，已收到您的消息。`
+    } catch (error) {
+      console.error('API调用失败:', error)
+      return `我是${modelConfig.modelName}，暂时无法处理您的请求。`
+    }
+  }
+
+  // 模拟回复
   return new Promise((resolve) => {
     setTimeout(() => {
       const responses = {
-        'deepseek-v3': `我是DeepSeek-V3，你刚才说："${userMessage}"。这是一个很棒的话题！我很乐意深入探讨它。`,
-        'deepseek-r1': `（DeepSeek-R1推理中）关于"${userMessage}"，我认为可以从逻辑推理的角度分析几个关键点：`,
-        'qwen-max': `👋 你好呀！我是Qwen-Max。你提到的"${userMessage}"很有意思呢，让我来帮你看看~`,
-        'gpt-4': `As GPT-4, I understand you said: "${userMessage}". This is a complex topic that involves multiple considerations.`
+        'ragflow': `我是${modelConfig.modelName}（RAGFlow专业模型），您刚才说："${userMessage}"。我会基于知识库为您提供专业解答。`,
+        'deepseek': `我是${modelConfig.modelName}（DeepSeek模型），关于"${userMessage}"，我可以从多个角度为您分析：`,
+        'default': `我是${modelConfig.modelName}，您提到："${userMessage}"。这是一个很好的问题，让我来帮您分析。`
       }
-      resolve(responses[model] || `谢谢你的消息："${userMessage}"。我还在学习中，请多多指教。`)
+
+      resolve(responses[modelConfig.modelType] || responses.default)
     }, 1000)
   })
 }
@@ -236,11 +333,6 @@ const typewriterEffect = (text, session) => {
 }
 
 // 工具函数
-const getModelLabel = (modelValue) => {
-  const model = modelOptions.find(item => item.value === modelValue)
-  return model ? model.label : modelValue
-}
-
 const updateSessionPreview = (session) => {
   const lastUserMessage = [...session.messages].reverse().find(msg => msg.role === 'user')
   if (lastUserMessage) {
@@ -298,18 +390,27 @@ const handleTouchEnd = (e) => {
   }
 }
 
-onMounted(() => {
+onMounted(async () => {
   window.addEventListener('resize', handleResize)
   window.addEventListener('touchstart', handleTouchStart)
   window.addEventListener('touchend', handleTouchEnd)
 
-  if (sessionList.value.length === 0) {
+  // 加载模型列表
+  await loadModels()
+
+  if (sessionList.value.length === 0 && currentModel.value) {
     createNewSession()
   }
 })
 </script>
 
 <style scoped>
+.model-description {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #606266;
+  font-style: italic;
+}
 .app-container {
   height: 100vh;
   width: 100vw;

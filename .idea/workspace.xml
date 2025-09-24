@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2dedef9f-febf-4c85-9bc9-7a63df950a70" name="更改" comment="保存一次">
+      <change afterPath="$PROJECT_DIR$/.idea/AIinstructor.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5699531a-fdbc-46a1-bd84-bf451f5baedb.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5699531a-fdbc-46a1-bd84-bf451f5baedb/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5699531a-fdbc-46a1-bd84-bf451f5baedb/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5699531a-fdbc-46a1-bd84-bf451f5baedb/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5699531a-fdbc-46a1-bd84-bf451f5baedb/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/config/GlobalCorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/config/InsecureWebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/config/MybatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/controller/ChatRecordsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/controller/ChatStreamController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/controller/ModelEndpointsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/entity/ChatRecords.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/entity/ModelEndpoints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/entity/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/entity/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/mapper/ChatRecordsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/mapper/ModelEndpointsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/mapper/UsersMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/ChatRecordsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/ChatStreamService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/ModelEndpointsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/UsersService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/impl/ChatRecordsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/impl/ModelEndpointsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/impl/UsersServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/resources/mapper/ChatRecordsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/resources/mapper/ModelEndpointsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/resources/mapper/UsersMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userWeb/src/api/AIChat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userWeb/src/api/chat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userWeb/src/api/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userWeb/src/views/user/ChatModel.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userWeb/src/views/user/ChatTemple.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userWeb/src/views/user/Test.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/AIinstructorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/AIinstructorApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userWeb/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userWeb/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userWeb/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userWeb/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userWeb/src/views/user/Chat.vue" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/src/views/user/Chat.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Vue Composition API Component" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="3323BoMojWH7CTU0l5EYtaQXSRh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AIinstructorApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Project/Java/AIinstructor/userWeb",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "D:\\Program Files\\JetBrains\\IntelliJ IDEA 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ],
+    "vue.recent.templates": [
+      "Vue Composition API Component"
+    ]
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\Java\AIinstructor\userWeb" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\Java\AIinstructor\AIinstructor\src\main\resources\mapper" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="AIinstructorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="AIinstructor" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="lnjz.backrer.aiinstructor.AIinstructorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="2dedef9f-febf-4c85-9bc9-7a63df950a70" name="更改" comment="" />
+      <created>1758501208413</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1758501208413</updated>
+      <workItem from="1758501209681" duration="4090000" />
+      <workItem from="1758508123607" duration="6866000" />
+      <workItem from="1758529396899" duration="2043000" />
+      <workItem from="1758587913445" duration="8079000" />
+      <workItem from="1758604858058" duration="13925000" />
+      <workItem from="1758671651611" duration="6789000" />
+      <workItem from="1758678591554" duration="4332000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="保存一次" />
+    <option name="LAST_COMMIT_MESSAGE" value="保存一次" />
+  </component>
+</project>
