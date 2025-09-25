@@ -36,6 +36,16 @@ public class ModelEndpoints {
     private Object modelType;
 
     /**
+     * 所属班级名称
+     */
+    private String className;
+
+    /**
+     * 所属教师名称
+     */
+    private String teacherName;
+
+    /**
      * 端点配置（包含url、api_url、api_id等信息）
      */
     private String endpointConfig;
@@ -71,6 +81,8 @@ public class ModelEndpoints {
             && (this.getModelName() == null ? other.getModelName() == null : this.getModelName().equals(other.getModelName()))
             && (this.getModelDescription() == null ? other.getModelDescription() == null : this.getModelDescription().equals(other.getModelDescription()))
             && (this.getModelType() == null ? other.getModelType() == null : this.getModelType().equals(other.getModelType()))
+            && (this.getClassName() == null ? other.getClassName() == null : this.getClassName().equals(other.getClassName()))
+            && (this.getTeacherName() == null ? other.getTeacherName() == null : this.getTeacherName().equals(other.getTeacherName()))
             && (this.getEndpointConfig() == null ? other.getEndpointConfig() == null : this.getEndpointConfig().equals(other.getEndpointConfig()))
             && (this.getApiToken() == null ? other.getApiToken() == null : this.getApiToken().equals(other.getApiToken()))
             && (this.getCreatedAt() == null ? other.getCreatedAt() == null : this.getCreatedAt().equals(other.getCreatedAt()))
@@ -85,6 +97,8 @@ public class ModelEndpoints {
         result = prime * result + ((getModelName() == null) ? 0 : getModelName().hashCode());
         result = prime * result + ((getModelDescription() == null) ? 0 : getModelDescription().hashCode());
         result = prime * result + ((getModelType() == null) ? 0 : getModelType().hashCode());
+        result = prime * result + ((getClassName() == null) ? 0 : getClassName().hashCode());
+        result = prime * result + ((getTeacherName() == null) ? 0 : getTeacherName().hashCode());
         result = prime * result + ((getEndpointConfig() == null) ? 0 : getEndpointConfig().hashCode());
         result = prime * result + ((getApiToken() == null) ? 0 : getApiToken().hashCode());
         result = prime * result + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
@@ -102,6 +116,8 @@ public class ModelEndpoints {
         sb.append(", modelName=").append(modelName);
         sb.append(", modelDescription=").append(modelDescription);
         sb.append(", modelType=").append(modelType);
+        sb.append(", className=").append(className);
+        sb.append(", teacherName=").append(teacherName);
         sb.append(", endpointConfig=").append(endpointConfig);
         sb.append(", apiToken=").append(apiToken);
         sb.append(", createdAt=").append(createdAt);

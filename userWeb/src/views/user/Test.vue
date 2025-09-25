@@ -295,6 +295,7 @@ import {
   CaretRight, CaretBottom
 } from '@element-plus/icons-vue'
 import { FetchModelEndpoints, GetModelEndpoints } from "@/api/user.js"
+import axios from "axios";
 
 // ====== 响应式状态 ======
 const userInput = ref('')
@@ -352,6 +353,23 @@ const checkMobile = () => {
     showSidebar.value = false
   }
 }
+const sendRequest = async () => {
+  const token = 'eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiI2MWEwZGU3My04NDVhLTQxMDQtOTBmNC1mYTI3YjA5Yjk3OGQiLCJ1c2VybmFtZSI6InVzZXIiLCJzdWIiOiJ1c2VyIiwiaWF0IjoxNzU4Nzg1NTc1LCJleHAiOjE3NTg3OTI3NzV9.z-GkymObT29szKACwt_ILG7b4CkjTTVzfygC5KKybrI' // 替换为你的实际token
+  const url = 'http://localhost:8080/api/chat-sessions/page?pageNum=1&pageSize=10' // 替换为你的API地址
+
+  try {
+    await axios.get(url, {
+      headers: {
+        'Authorization': `Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiI2MWEwZGU3My04NDVhLTQxMDQtOTBmNC1mYTI3YjA5Yjk3OGQiLCJ1c2VybmFtZSI6InVzZXIiLCJzdWIiOiJ1c2VyIiwiaWF0IjoxNzU4Nzg1NTc1LCJleHAiOjE3NTg3OTI3NzV9.z-GkymObT29szKACwt_ILG7b4CkjTTVzfygC5KKybrI`,
+        'Content-Type': 'application/json'
+      }
+    })
+    console.log('请求成功:', response.data)
+  } catch (error) {
+    console.error('请求失败:', error)
+  }
+}
+sendRequest()
 
 const truncateDescription = (description) => {
   if (!description) return ''

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 /**
 * @author JoBackRer
 * @description 针对表【model_endpoints(模型端点配置表)】的数据库操作Service实现
-* @createDate 2025-09-23 09:31:25
+* @createDate 2025-09-24 15:23:50
 */
 @Service
 public class ModelEndpointsServiceImpl extends ServiceImpl<ModelEndpointsMapper, ModelEndpoints>

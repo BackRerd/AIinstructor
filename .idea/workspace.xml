@@ -5,57 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dedef9f-febf-4c85-9bc9-7a63df950a70" name="更改" comment="保存一次">
-      <change afterPath="$PROJECT_DIR$/.idea/AIinstructor.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5699531a-fdbc-46a1-bd84-bf451f5baedb.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5699531a-fdbc-46a1-bd84-bf451f5baedb/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5699531a-fdbc-46a1-bd84-bf451f5baedb/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5699531a-fdbc-46a1-bd84-bf451f5baedb/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5699531a-fdbc-46a1-bd84-bf451f5baedb/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/config/GlobalCorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/config/InsecureWebClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/config/MybatisPlusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/controller/ChatRecordsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/controller/ChatStreamController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/controller/ModelEndpointsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/entity/ChatRecords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/entity/ModelEndpoints.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/entity/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/entity/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/mapper/ChatRecordsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/mapper/ModelEndpointsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/mapper/UsersMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/ChatRecordsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/ChatStreamService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/ModelEndpointsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/UsersService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/impl/ChatRecordsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/impl/ModelEndpointsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/impl/UsersServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/resources/mapper/ChatRecordsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/resources/mapper/ModelEndpointsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/resources/mapper/UsersMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userWeb/src/api/AIChat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userWeb/src/api/chat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userWeb/src/api/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userWeb/src/views/user/ChatModel.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userWeb/src/views/user/ChatTemple.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userWeb/src/views/user/Test.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/DTO/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/DTO/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/DTO/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/config/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/controller/ChatSessionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/entity/UserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/utils/JwtTokenUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/utils/PasswordUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userWeb/src/components/MarkdownRenderer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userWeb/src/components/SvgIcon.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userWeb/src/views/user/SidebarContent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userWeb/接口使用方案.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5699531a-fdbc-46a1-bd84-bf451f5baedb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5699531a-fdbc-46a1-bd84-bf451f5baedb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AIinstructor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/AIinstructorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/AIinstructorApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/config/GlobalCorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/config/GlobalCorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/controller/ChatRecordsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/controller/ChatRecordsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/controller/ChatStreamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/controller/ChatStreamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/entity/ModelEndpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/entity/ModelEndpoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/mapper/ChatRecordsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/mapper/ChatRecordsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/mapper/ModelEndpointsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/mapper/ModelEndpointsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/mapper/UsersMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/mapper/UsersMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/ChatRecordsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/ChatRecordsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/ChatStreamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/ChatStreamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/ModelEndpointsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/ModelEndpointsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/UsersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/impl/ChatRecordsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/impl/ChatRecordsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/impl/ModelEndpointsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/impl/ModelEndpointsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/impl/UsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/java/lnjz/backrer/aiinstructor/service/impl/UsersServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AIinstructor/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/resources/mapper/ChatRecordsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIinstructor/src/main/resources/mapper/ModelEndpointsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userWeb/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userWeb/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userWeb/src/api/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/src/api/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userWeb/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userWeb/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userWeb/src/views/user/Chat.vue" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/src/views/user/Chat.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userWeb/src/views/user/ChatTemple.vue" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/src/views/user/ChatTemple.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userWeb/src/views/user/Test.vue" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/src/views/user/Test.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userWeb/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,35 +77,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.AIinstructorApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Project/Java/AIinstructor/userWeb",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "D:\\Program Files\\JetBrains\\IntelliJ IDEA 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AIinstructorApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Project/Java/AIinstructor/userWeb&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Program Files\\JetBrains\\IntelliJ IDEA 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ],
-    "vue.recent.templates": [
-      "Vue Composition API Component"
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -154,6 +148,8 @@
       <workItem from="1758604858058" duration="13925000" />
       <workItem from="1758671651611" duration="6789000" />
       <workItem from="1758678591554" duration="4332000" />
+      <workItem from="1758691299109" duration="9384000" />
+      <workItem from="1758758612427" duration="21689000" />
     </task>
     <servers />
   </component>

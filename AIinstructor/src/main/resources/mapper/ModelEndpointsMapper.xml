@@ -9,6 +9,8 @@
             <result property="modelName" column="model_name" />
             <result property="modelDescription" column="model_description" />
             <result property="modelType" column="model_type" />
+            <result property="className" column="class_name" />
+            <result property="teacherName" column="teacher_name" />
             <result property="endpointConfig" column="endpoint_config" />
             <result property="apiToken" column="api_token" />
             <result property="createdAt" column="created_at" />
@@ -16,7 +18,7 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        model_id,model_name,model_description,model_type,endpoint_config,api_token,
-        created_at,updated_at
+        model_id,model_name,model_description,model_type,class_name,teacher_name,
+        endpoint_config,api_token,created_at,updated_at
     </sql>
 </mapper>

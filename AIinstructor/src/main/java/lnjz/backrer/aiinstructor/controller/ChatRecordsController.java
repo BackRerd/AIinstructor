@@ -6,12 +6,15 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lnjz.backrer.aiinstructor.entity.ChatRecords;
 import lnjz.backrer.aiinstructor.entity.Result;
 import lnjz.backrer.aiinstructor.service.ChatRecordsService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.StringTokenizer;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/chat-records")
 public class ChatRecordsController {
@@ -25,6 +28,13 @@ public class ChatRecordsController {
     @PostMapping
     public Result<?> addChatRecord(@RequestBody ChatRecords chatRecord) {
         try {
+            chatRecord.setResponseContent(chatRecord.getResponseContent().replaceAll("[\\ud800-\\udfff]", ""));
+            chatRecord.setMessageContent(chatRecord.getMessageContent().replaceAll("[\\ud800-\\udfff]", ""));
+            StringTokenizer responseToken = new StringTokenizer(chatRecord.getResponseContent());
+            StringTokenizer messageToken = new StringTokenizer(chatRecord.getMessageContent());
+            chatRecord.setResponseTokens(responseToken.countTokens());
+            chatRecord.setMessageTokens(messageToken.countTokens());
+            chatRecord.setTotalTokens(responseToken.countTokens()+messageToken.countTokens());
             boolean success = chatRecordsService.save(chatRecord);
             if (success) {
                 return Result.success("新增成功", chatRecord);
@@ -76,6 +86,19 @@ public class ChatRecordsController {
         } catch (Exception e) {
             return Result.error("批量删除异常: " + e.getMessage());
         }
+    }
+    @GetMapping("/getRecordBySession")
+    public Result<?> getBySessionId(@RequestParam String sessionId) {
+        List<ChatRecords> chatRecordsByRecords = chatRecordsService.getChatRecordsByRecords(sessionId);
+
+        for (int i = 0; i < chatRecordsByRecords.size(); i++) {
+            if (chatRecordsByRecords.get(i).getMessageType().equals("assistant")) {
+                chatRecordsByRecords.remove(i);
+                i--; // 调整索引
+            }
+        }
+
+        return Result.success(chatRecordsByRecords);
     }
 
     /**
@@ -134,7 +157,7 @@ public class ChatRecordsController {
             QueryWrapper<ChatRecords> queryWrapper = new QueryWrapper<>();
 
             // 只查询未删除的记录
-            queryWrapper.eq("is_deleted", 0);
+//            queryWrapper.eq("is_deleted", 0);
 
             // 添加查询条件
             if (userId != null && !userId.trim().isEmpty()) {
@@ -157,7 +180,7 @@ public class ChatRecordsController {
             }
 
             // 按消息时间倒序排列
-            queryWrapper.orderByDesc("message_timestamp");
+//            queryWrapper.orderByDesc("message_timestamp");
 
             IPage<ChatRecords> result = chatRecordsService.page(page, queryWrapper);
             return Result.success("查询成功", result);
